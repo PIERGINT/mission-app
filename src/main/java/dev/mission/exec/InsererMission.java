@@ -2,11 +2,13 @@ package dev.mission.exec;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import dev.mission.entite.Mission;
 import dev.mission.repository.MissionRepository;
 
-@Controller
+
 public class InsererMission implements Runnable{
 
 	private MissionRepository missionRepository;
@@ -31,6 +33,7 @@ public class InsererMission implements Runnable{
 		mission2.setDateDebut(LocalDate.of(2020, 2, 04));
 		mission2.setDateFin(LocalDate.of(2020, 6, 5));
 		this.missionRepository.save(mission2);
+	
+		
 	}
-
 }
